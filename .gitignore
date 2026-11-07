@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.DS_Store
+
+# Local settings, model checkpoints and run outputs
+config/local.yaml
+/models/
+/runs/
+/figures/
+
+# StereoSet files are not redistributed; see README
+data/

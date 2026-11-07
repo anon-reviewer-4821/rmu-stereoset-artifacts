@@ -1,0 +1,36 @@
+[project]
+name = "rmu-stereoset"
+version = "0.1.0"
+description = "Code for 'One Word Apart: Can Representation Unlearning Separate Stereotypes from Anti-Stereotypes?'"
+authors = [{ name = "Anonymous" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+# Exact versions used for the paper; see requirements.txt for the full pinned set.
+dependencies = [
+    "accelerate==1.15.0",
+    "matplotlib==3.11.2",
+    "numpy==2.5.3",
+    "pandas==3.0.6",
+    "pyyaml==6.0.3",
+    "torch==2.14.1",
+    "tqdm==4.70.1",
+    "transformers==5.19.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]

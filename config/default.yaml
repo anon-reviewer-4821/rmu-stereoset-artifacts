@@ -1,0 +1,17 @@
+# Shared defaults. Override per machine in config/local.yaml (git-ignored).
+# Relative paths are resolved from the repository root.
+paths:
+  # Folder that holds local model checkpoints (see `models` below).
+  models_root: models
+  # Run outputs (losses.csv, plots), one sub-folder per run.
+  runs_root: runs
+
+# Short model names -> folder names inside paths.models_root.
+# Anything not listed here is treated as a local path or a Hugging Face Hub id.
+models:
+  lapa-12b-instruct: lapa-v0.1.2-instruct
+
+data:
+  stereoset_files:
+    - data/stereoset/test.json
+    - data/stereoset/dev.json
